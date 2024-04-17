@@ -1,1 +1,7 @@
-<p>event-list works!</p>
+<div *ngFor="let hangoutEvent of eventList">
+    <event-card
+        [title]="hangoutEvent.title"
+        [imageURL]="hangoutEvent.imgUrl"
+        [description]="hangoutEvent.description"
+    ></event-card>
+</div>

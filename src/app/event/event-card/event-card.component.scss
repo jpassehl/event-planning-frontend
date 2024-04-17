@@ -15,22 +15,25 @@
     flex-direction: column;
     border: 2px solid rgba(206, 206, 206, 0.96);
     border-radius: 5px;
-    width: 100%; 
+    width: inherit;
     height: 100%; 
     
   }
+
   .event-image-container{
     max-width: 300px;
     width: 100%;
     aspect-ratio: 1 / 1;
-
   }
 
   img{
+    padding: 8px;
+    min-width: 250px;
     height: 100%;
     width: 100%;
     inset: 0px;
     object-fit: cover;
     color: transparent;
   }
+
 }

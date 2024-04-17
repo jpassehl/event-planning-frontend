@@ -1,7 +1,0 @@
-.event-cards-container{
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    padding-left: 40px;
-    padding-top: 16px;
-}
