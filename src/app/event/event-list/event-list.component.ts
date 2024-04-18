@@ -1,29 +1,23 @@
-import { Component } from '@angular/core';
-import { HangoutEvent } from 'src/app/models/HangoutEvent';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
+import { EventIdea } from 'src/app/models/EventIdea';
 
 @Component({
   selector: 'event-list',
   templateUrl: './event-list.component.html',
   styleUrls: ['./event-list.component.css']
 })
-export class EventListComponent {
+export class EventListComponent implements OnInit {
 
-  eventList: HangoutEvent[] = [
-    {
-      title: "Fast & Furious Movie Night",
-      description: "Host a movie night! Very low-key vibes. Potluck style, have guests bring food and drinks to share.",
-      imgUrl: "https://static.wikia.nocookie.net/fastandfurious/images/8/87/Fast_One_Poster.jpg"
-    },
-    {
-      title: "Arts & Craft Night! ",
-      description: "Host a night where we paint wine glasses",
-      imgUrl: "https://www.nowplayingutah.com/wp-content/uploads/sites/www.nowplayingutah.com/images/2022/11/Screen-Shot-2022-11-17-at-3.49.35-PM.png"
-    },
-    {
-      title: "Game Night",
-      description: "Host a gaming night, play Wario Ware minigames together",
-      imgUrl: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000068678/5b072b55e8a6993071b4cde9f74d9cf7aeac0b52141177efed6c8ce9b580a435"
-    }
-  ]
+  eventList: EventIdea[];
+
+  constructor(private http: HttpClient){}
+
+  ngOnInit(): void {
+    const url: string = 'assets/data/properties.json'
+    this.http.get(url).subscribe((data) =>{
+      console.log(data);
+    });
+  }
   
 }
