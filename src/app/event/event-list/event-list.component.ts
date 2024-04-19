@@ -14,7 +14,7 @@ export class EventListComponent implements OnInit {
   constructor(private http: HttpClient){}
 
   ngOnInit(): void {
-    const url: string = 'assets/data/properties.json'
+    const url: string = "/data/properties.json"
     this.http.get(url).subscribe((data) =>{
       console.log(data);
     });
