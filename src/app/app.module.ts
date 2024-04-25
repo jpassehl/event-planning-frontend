@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { EventCardComponent } from './event/event-card/event-card.component';
 import { EventListComponent } from './event/event-list/event-list.component'; 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { EventIdeaApiService } from './services/event-idea-api.service';
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MatCardModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    EventIdeaApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

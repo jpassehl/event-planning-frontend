@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
 import { EventIdea } from 'src/app/models/EventIdea';
+import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
 
 @Component({
   selector: 'event-list',
@@ -11,13 +11,13 @@ export class EventListComponent implements OnInit {
 
   eventList: EventIdea[];
 
-  constructor(private http: HttpClient){}
+  constructor(private eventIdeaService: EventIdeaApiService){}
 
   ngOnInit(): void {
-    const url: string = "/data/properties.json"
-    this.http.get(url).subscribe((data) =>{
-      console.log(data);
+    this.eventIdeaService.getAllEventIdeas().subscribe((data : EventIdea[]) =>{
+      this.eventList = data;
+    }, error =>{
+      console.log(error);
     });
-  }
-  
+  } 
 }
