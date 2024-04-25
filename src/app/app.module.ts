@@ -10,8 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
-import { EventCardComponent } from './event/event-card/event-card.component';
-import { EventListComponent } from './event/event-list/event-list.component'; 
+import { EventCardComponent } from './event/event-idea-card/event-idea-card.component';
+import { EventListComponent } from './event/event-idea-list/event-idea-list.component'; 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { EventIdeaApiService } from './services/event-idea-api.service';
 
