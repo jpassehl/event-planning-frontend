@@ -14,7 +14,7 @@ import { EventCardComponent } from './event/event-idea-card/event-idea-card.comp
 import { EventListComponent } from './event/event-idea-list/event-idea-list.component'; 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { EventIdeaApiService } from './services/event-idea-api.service';
-import { AddEventIdeaComponent } from './event/add-event-idea/add-event-idea.component';
+import { CreateEventIdeaComponent } from './event/create-event-idea/create-event-idea.component';
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { AddEventIdeaComponent } from './event/add-event-idea/add-event-idea.com
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    AddEventIdeaComponent
+    CreateEventIdeaComponent
   ],
   providers: [
     EventIdeaApiService
