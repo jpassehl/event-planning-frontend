@@ -8,15 +8,22 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "overrides": {
+    "@angular/common": "17.3.3",
+    "@angular/core": "17.3.6",
+    "@angular/animations": "17.3.3",
+    "@angular/compiler": "17.3.3",
+    "@angular/platform-browser": "17.3.3"
+  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "^17.3.3",
-    "@angular/animations": "^17.3.3",
+    "@angular/animations": "17.3.3",
     "@angular/cdk": "^17.3.3",
-    "@angular/core": "^17.3.6",
-    "@angular/http": "^7.2.16",
-    "@angular/material": "^17.3.3",
-    "@angular/platform-browser-dynamic": "^17.3.3",
+    "@angular/common": "17.3.3",
+    "@angular/core": "17.3.6",
+    "@angular/material": "17.3.3",
+    "@angular/platform-browser-dynamic": "17.3.3",
     "@angular/router": "^17.3.6",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0"
