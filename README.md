@@ -1,6 +1,7 @@
+
 # EventPlanningFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+I had an idea to create an appp to help the "planner" of the friend group, as that's my role within my community of friends! 😊 I planning fun events, and things to do with my friends so I'm creating an app to help me to that! The goal is to keep track of "event ideas" i.e. things we want to do together. Because it happens way to often where we suggest something and we all express interest but it never happens! So we need a tool to track it! (think Jira/Trello but for friend hangouts 🤭). This is still very much a WIP, but I'm planning to continue to work on this whenever I have the time! 
 
 ## Development server
 
