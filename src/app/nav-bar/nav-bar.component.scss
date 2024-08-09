@@ -1,0 +1,15 @@
+mat-toolbar {
+  background-color: #f27e9b;
+  gap: 16px;
+
+  .title{
+    font-weight: bold;
+  }
+
+}
+.spacer {
+  flex: 1 1 auto;
+}
+::ng-deep .nav-menu.mat-mdc-menu-panel{
+    background-color: #f5f5f5f5;
+}

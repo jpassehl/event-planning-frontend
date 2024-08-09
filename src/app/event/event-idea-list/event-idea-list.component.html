@@ -1,0 +1,7 @@
+<div *ngFor="let eventIdea of eventList">
+    <event-card
+        [title]="eventIdea.title"
+        [imageURL]="eventIdea.imgUrl"
+        [description]="eventIdea.description"
+    ></event-card>
+</div>

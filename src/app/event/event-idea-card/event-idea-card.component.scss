@@ -1,0 +1,41 @@
+:host {
+  flex: 0 0 auto;
+  position: relative;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  overflow: visible;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  width: 300px;
+
+  .event-card-container{
+    background-color: #ffe5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #ffc2d1;
+    border-radius: 16px;
+    width: inherit;
+    height: 100%;
+
+
+  }
+
+  .event-image-container{
+    max-width: 300px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  img{
+    padding: 8px;
+    min-width: 250px;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    object-fit: cover;
+    color: transparent;
+  }
+
+}
