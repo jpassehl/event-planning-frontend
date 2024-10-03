@@ -16,8 +16,6 @@ export class EventListComponent implements OnInit {
   ngOnInit(): void {
     this.eventIdeaService.getAllEventIdeas().subscribe((data : EventIdea[]) =>{
       this.eventList = data;
-    }, error =>{
-      console.log(error);
     });
   } 
 }
