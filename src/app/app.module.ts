@@ -17,6 +17,7 @@ import { EventIdeaApiService } from './services/event-idea-api.service';
 import { EventIdeaCreateComponent } from './event/event-idea-create/event-idea-create.component';
 import { eventIdeaReducer } from './state/event-ideas/event-idea.reducer';
 import { StoreModule } from '@ngrx/store';
+import { AppRoutingModule } from './app-routing-module';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { StoreModule } from '@ngrx/store';
     AppComponent,
     EventCardComponent,
     EventListComponent,
+    EventIdeaCreateComponent,
     NavBarComponent,
    ],
   imports: [
@@ -35,7 +37,7 @@ import { StoreModule } from '@ngrx/store';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    EventIdeaCreateComponent,
+    AppRoutingModule,
     StoreModule.forRoot({
 			eventIdeas: eventIdeaReducer,
     })

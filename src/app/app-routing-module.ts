@@ -1,19 +1,26 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { CreateEventIdeaComponent } from './event/event-idea-create/event-idea-create.component';
+import { ApplicationConfig, NgModule } from '@angular/core';
+import { RouterModule, Routes, provideRouter, withDebugTracing } from '@angular/router';
+import { EventIdeaCreateComponent } from './event/event-idea-create/event-idea-create.component';
+import { EventListComponent } from './event/event-idea-list/event-idea-list.component';
+
 
 const routes: Routes = [
-	{path:'create-event-idea', component: CreateEventIdeaComponent },
+	{
+		path: '',
+		title: 'Home',	
+		component: EventListComponent 
+	},
+	{
+		path: 'create-event-idea', 
+		title: 'Create Event Idea',
+		component: EventIdeaCreateComponent 
+	},
 ];
 
-@NgModule({
-	imports: [
-		RouterModule.forRoot(routes, {
-			paramsInheritanceStrategy: 'always',
-		})
-	],
-	exports: [RouterModule],
-	providers: []
+@NgModule({ 
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
+  
 })
-
-export class AppRoutingModule {}
+  
+export class AppRoutingModule { }
