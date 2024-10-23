@@ -3,11 +3,16 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
 @include mat.core();
 
+
 body {
   background-color: #ffb3c6;
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
 }
-
-
 .customize+* .mat-mdc-menu-panel {
     background-color: pink !important;
   }
+

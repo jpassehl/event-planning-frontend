@@ -1,0 +1,25 @@
+:host {
+    display: grid;
+}
+
+.create-event-idea-form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    ::ng-deep {
+        .mat-mdc-text-field-wrapper{
+            overflow: visible;
+        }
+        .mdc-text-field--filled {
+
+        }
+        .mdc-text-field .mdc-floating-label {
+        }
+    }
+
+    .mat-form-field{
+        //background-color: aquamarine; //For Testing Purposes Only!
+        width: 25%;
+    }
+}

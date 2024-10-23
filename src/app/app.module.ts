@@ -18,7 +18,9 @@ import { EventIdeaCreateComponent } from './event/event-idea-create/event-idea-c
 import { eventIdeaReducer } from './state/event-ideas/event-idea.reducer';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing-module';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -38,12 +40,16 @@ import { AppRoutingModule } from './app-routing-module';
     MatCardModule,
     HttpClientModule,
     AppRoutingModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
     StoreModule.forRoot({
 			eventIdeas: eventIdeaReducer,
     })
   ],
   providers: [
-    EventIdeaApiService
+    EventIdeaApiService,
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
   ],
   bootstrap: [AppComponent]
 })
