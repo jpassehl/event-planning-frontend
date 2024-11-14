@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './event-idea-create.component.scss'
 })
 export class EventIdeaCreateComponent {
-
+   imageCreationSrc = '../../../assets/images/event-creation.png';
 }
