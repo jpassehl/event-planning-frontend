@@ -1,22 +1,17 @@
-:host {
-    display: grid;
-}
-
-.create-event-idea-form{
+.create-event-idea-form-container{
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-/*     ::ng-deep {
-        .mat-mdc-text-field-wrapper{
-            overflow: visible;
-        }
-        .mdc-text-field--filled {}
-        .mdc-text-field .mdc-floating-label {}
-    } */
-
-    .mat-form-field{
-        //background-color: aquamarine; //For Testing Purposes Only!
+    gap:36px;
+    
+    .create-event-idea-form{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         width: 25%;
+        .mat-form-field{
+           // width: 25%;
+        }
+    }
+    img {
+        width: 50%;
     }
 }
