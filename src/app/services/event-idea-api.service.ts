@@ -13,6 +13,9 @@ export class EventIdeaApiService {
   constructor(private http: HttpClient) {}
 
     getAllEventIdeas(): Observable<EventIdea[]>{
-      return this.http.get<EventIdea[]>(this.baseApiUrl + '/api/eventidea')
+      return this.http.get<EventIdea[]>(this.baseApiUrl + '/api/eventidea');
     } 
+    createEventIdea(eventIdea: EventIdea): Observable<EventIdea> {
+      return this.http.post<EventIdea>(this.baseApiUrl + '/api/eventidea', eventIdea);
+    }
 }
