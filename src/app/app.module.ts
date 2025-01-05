@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing-module';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/mater
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({
 			eventIdeas: eventIdeaReducer,
     })
