@@ -1,3 +1,4 @@
+<h1 class="mat-h1">Create An Event Idea</h1>
 <div class="create-event-idea-form-container">
   <form class="create-event-idea-form" [formGroup]="eventIdeaForm" (ngSubmit)="submitEventIdea()">
     <mat-form-field appearance="fill" class="mat-form-field" >
@@ -9,10 +10,10 @@
       <textarea matInput  formControlName="description" value="Description"></textarea>
     </mat-form-field>
     <mat-form-field class="mat-form-field" >
-      <mat-label>Event Image</mat-label>
+      <mat-label>Event Idea Image URL</mat-label>
       <input matInput  formControlName="imgUrl" value="ImageURL" />
     </mat-form-field>
-    <button mat-flat-button color="primary" type="submit"[disabled]="!eventIdeaForm.valid" class="mat-form-field">Submit</button>
+    <button mat-flat-button color="primary" type="submit"[disabled]="!eventIdeaForm.valid" class="mat-form-field">Create</button>
   </form>
   <img [src]="imageCreationSrc" alt="image">
 </div>

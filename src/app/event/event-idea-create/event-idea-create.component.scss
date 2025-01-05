@@ -1,17 +1,17 @@
-.create-event-idea-form-container{
+.mat-h1 {
+  font-weight: bold;
+}
+.create-event-idea-form-container {
+  display: flex;
+  gap: 36px;
+
+  .create-event-idea-form {
     display: flex;
-    gap:36px;
-    
-    .create-event-idea-form{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 25%;
-        .mat-form-field{
-           // width: 25%;
-        }
-    }
-    img {
-        width: 50%;
-    }
+    flex-direction: column;
+    gap: 16px;
+    width: 25%;
+  }
+  img {
+    width: 50%;
+  }
 }
