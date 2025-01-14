@@ -8,7 +8,6 @@ import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
   styleUrls: ['./event-idea-list.component.scss']
 })
 export class EventListComponent implements OnInit {
-
   eventList: EventIdea[];
 
   constructor(private eventIdeaService: EventIdeaApiService){}
@@ -18,4 +17,8 @@ export class EventListComponent implements OnInit {
       this.eventList = data;
     });
   } 
+
+  handleDeleteEvent(){
+    console.log("delete button clicked");
+  }
 }
