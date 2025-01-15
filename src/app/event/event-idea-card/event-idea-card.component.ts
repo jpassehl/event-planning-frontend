@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { Output, EventEmitter } from '@angular/core';
+import { EventIdea } from "src/app/models/EventIdea";
 
 @Component({
     selector: 'event-card',
@@ -7,13 +8,11 @@ import { Output, EventEmitter } from '@angular/core';
     styleUrls: ['./event-idea-card.component.scss']
 })
 export class EventCardComponent {
-	@Input() title: string;
-    @Input() imageURL: string;
-    @Input() description: string;
+    @Input() eventIdea: EventIdea;
 
-    @Output() deleteClicked = new EventEmitter<void>();
+    @Output() deleteClicked = new EventEmitter<string>();
 
-    onDeleteClicked(){
-        this.deleteClicked.emit();
+    onDeleteClicked(id: string){
+        this.deleteClicked.emit(id);
     }
 }

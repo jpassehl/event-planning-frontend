@@ -13,12 +13,21 @@ export class EventListComponent implements OnInit {
   constructor(private eventIdeaService: EventIdeaApiService){}
 
   ngOnInit(): void {
+    this.loadEventIdeas();
+  } 
+
+  handleDeleteEvent(id: string){
+    console.log(id);
+    this.eventIdeaService.deleteEventIdea(id).subscribe({
+      next: (v) => console.log(v),
+      error: (e) => console.error(e),
+      complete: () => this.loadEventIdeas()
+  })
+  }
+
+  loadEventIdeas(){
     this.eventIdeaService.getAllEventIdeas().subscribe((data : EventIdea[]) =>{
       this.eventList = data;
     });
-  } 
-
-  handleDeleteEvent(){
-    console.log("delete button clicked");
   }
 }

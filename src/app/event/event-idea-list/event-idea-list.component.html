@@ -1,8 +1,6 @@
 <div *ngFor="let eventIdea of eventList">
     <event-card
-        [title]="eventIdea.title"
-        [imageURL]="eventIdea.imgUrl"
-        [description]="eventIdea.description"
-        (deleteClicked)="handleDeleteEvent()"
+        [eventIdea]="eventIdea"
+        (deleteClicked)="handleDeleteEvent($event)"
     ></event-card>
 </div>

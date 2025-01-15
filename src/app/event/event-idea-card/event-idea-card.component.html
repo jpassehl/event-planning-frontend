@@ -2,18 +2,18 @@
   <mat-card class="event-card-container">
     <mat-card-header>
       <mat-card-title>
-        <h3>{{title}}</h3>
+        <h3>{{eventIdea.title}}</h3>
       </mat-card-title>
     </mat-card-header>
     <div class="event-image-container">
-        <img mat-card-image src={{imageURL}}>
+        <img mat-card-image src={{eventIdea.imgUrl}}>
     </div>
     <mat-card-content>
-      {{description}}
+      {{eventIdea.description}}
     </mat-card-content>
     <mat-card-actions>
       <button mat-button>EDIT</button>
-      <button mat-button (click)="onDeleteClicked()">DELETE</button>
+      <button mat-button (click)="onDeleteClicked(eventIdea.id)">DELETE</button>
     </mat-card-actions>
   </mat-card>
 
