@@ -1,6 +1,6 @@
 import { ApplicationConfig, NgModule } from '@angular/core';
 import { RouterModule, Routes, provideRouter, withDebugTracing } from '@angular/router';
-import { EventIdeaCreateComponent } from './event/event-idea-create/event-idea-create.component';
+import { EventEditComponent } from './event/event-idea-edit/event-idea-edit.component';
 import { EventListComponent } from './event/event-idea-list/event-idea-list.component';
 
 
@@ -11,9 +11,9 @@ const routes: Routes = [
 		component: EventListComponent 
 	},
 	{
-		path: 'create-event-idea', 
-		title: 'Create Event Idea',
-		component: EventIdeaCreateComponent 
+		path: 'edit-event-idea', 
+		title: 'Edit Event Idea',
+		component: EventEditComponent 
 	},
 ];
 

@@ -6,11 +6,11 @@ import { EventIdea } from 'src/app/models/EventIdea';
 import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
 
 @Component({
-  selector: 'event-idea-create',
-  templateUrl: './event-idea-create.component.html',
-  styleUrl: './event-idea-create.component.scss',
+  selector: 'event-idea-edit',
+  templateUrl: './event-idea-edit.component.html',
+  styleUrl: './event-idea-edit.component.scss',
 })
-export class EventIdeaCreateComponent {
+export class EventEditComponent {
   eventIdea: EventIdea;
   eventIdeaForm: FormGroup;
   imageCreationSrc = '../../../assets/images/event-creation.png';

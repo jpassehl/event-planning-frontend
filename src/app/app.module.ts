@@ -14,7 +14,7 @@ import { EventCardComponent } from './event/event-idea-card/event-idea-card.comp
 import { EventListComponent } from './event/event-idea-list/event-idea-list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { EventIdeaApiService } from './services/event-idea-api.service';
-import { EventIdeaCreateComponent } from './event/event-idea-create/event-idea-create.component';
+import { EventEditComponent } from './event/event-idea-edit/event-idea-edit.component';
 import { eventIdeaReducer } from './state/event-ideas/event-idea.reducer';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing-module';
@@ -28,7 +28,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     EventCardComponent,
     EventListComponent,
-    EventIdeaCreateComponent,
+    EventEditComponent,
     NavBarComponent,
    ],
   imports: [

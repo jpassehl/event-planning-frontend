@@ -2,16 +2,16 @@
 <div class="create-event-idea-form-container">
   <form class="create-event-idea-form" [formGroup]="eventIdeaForm" (ngSubmit)="submitEventIdea()">
     <mat-form-field appearance="fill" class="mat-form-field" >
-      <mat-label>Event Idea Title</mat-label>
-      <input matInput formControlName="name" value="Untitled Event" />
+      <mat-label>Event Idea Name</mat-label>
+      <input matInput formControlName="name" />
     </mat-form-field>
     <mat-form-field class="mat-form-field" >
       <mat-label>Event Idea Description</mat-label>
-      <textarea matInput  formControlName="description" value="Description"></textarea>
+      <textarea matInput formControlName="description"></textarea>
     </mat-form-field>
     <mat-form-field class="mat-form-field" >
       <mat-label>Event Idea Image URL</mat-label>
-      <input matInput  formControlName="imgUrl" value="ImageURL" />
+      <input matInput  formControlName="imgUrl"/>
     </mat-form-field>
     <button mat-flat-button color="primary" type="submit"[disabled]="!eventIdeaForm.valid" class="mat-form-field">Create</button>
   </form>

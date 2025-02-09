@@ -1,6 +1,6 @@
 export interface EventIdea {
     id: string;
-    title: string;
+    name: string;
     description: string;
     imgUrl: string;
 }

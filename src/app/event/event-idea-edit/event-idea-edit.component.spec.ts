@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateEventIdeaComponent } from './event-idea-create.component';
+import { CreateEventIdeaComponent } from './event-idea-edit.component';
 
 describe('AddEventIdeaComponent', () => {
   let component: CreateEventIdeaComponent;
