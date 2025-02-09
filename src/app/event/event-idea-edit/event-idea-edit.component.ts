@@ -28,7 +28,6 @@ export class EventEditComponent {
       this.eventIdeaId = params.eventIdeaId;
     }) 
     
-
     this.eventIdeaForm = new FormGroup({
       name: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
@@ -36,10 +35,16 @@ export class EventEditComponent {
     });
   }
 
+  loadEventIdea(){
+    this.eventIdeaService.getEventIdea(this.eventIdeaId).subscribe((data) =>{
+       //TO-DO - Handle 404 Response
+    });
+  }
+
   submitEventIdea() {
     this.eventIdea = { ...this.eventIdea, ...this.eventIdeaForm.value };
     this.eventIdeaService.createEventIdea(this.eventIdea).subscribe({
-      next: (eventIdea) => {
+      next: () => {
         this.router.navigate(['/']);
       },
     });
