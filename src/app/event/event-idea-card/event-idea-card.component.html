@@ -12,7 +12,7 @@
       {{eventIdea.description}}
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>EDIT</button>
+      <a mat-button [routerLink]= "'/edit-event-idea/'+ eventIdea.id"> EDIT</a>
       <button mat-button (click)="onDeleteClicked(eventIdea.id)">DELETE</button>
     </mat-card-actions>
   </mat-card>

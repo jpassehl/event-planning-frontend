@@ -11,14 +11,24 @@ const routes: Routes = [
 		component: EventListComponent 
 	},
 	{
-		path: 'edit-event-idea', 
+		path: 'edit-event-idea/:eventIdeaId', 
 		title: 'Edit Event Idea',
-		component: EventEditComponent 
+		component: EventEditComponent ,
 	},
+	{
+		path: 'edit-event-idea', 
+		title: 'Create Event Idea',
+		component: EventEditComponent ,
+	},
+
+
 ];
 
 @NgModule({ 
-	imports: [RouterModule.forRoot(routes)],
+	imports: [RouterModule.forRoot(routes, {
+		paramsInheritanceStrategy: 'always',
+		})
+	],
 	exports: [RouterModule]
   
 })

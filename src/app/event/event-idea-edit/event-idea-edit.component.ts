@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EventIdea } from 'src/app/models/EventIdea';
 import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
 
@@ -11,16 +11,24 @@ import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
   styleUrl: './event-idea-edit.component.scss',
 })
 export class EventEditComponent {
+  @Input() eventIdeaId: string;
   eventIdea: EventIdea;
   eventIdeaForm: FormGroup;
   imageCreationSrc = '../../../assets/images/event-creation.png';
 
   constructor(
     private eventIdeaService: EventIdeaApiService,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+
+    this.activatedRoute.params.subscribe((params: any) => {
+      this.eventIdeaId = params.eventIdeaId;
+    }) 
+    
+
     this.eventIdeaForm = new FormGroup({
       name: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
