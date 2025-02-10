@@ -1,7 +1,7 @@
-<h1 class="mat-h1">Create An Event Idea</h1>
-<div class="create-event-idea-form-container">
-  <form class="create-event-idea-form" [formGroup]="eventIdeaForm" (ngSubmit)="submitEventIdea()">
-    <mat-form-field appearance="fill" class="mat-form-field" >
+<h1 class="mat-h1">{{ eventIdeaConfig ? 'Edit Event Idea' : 'Create Event Idea'}}</h1>
+<div class="event-form-container">
+  <form class="event-form" [formGroup]="eventIdeaForm" (ngSubmit)="submitEventIdea()">
+    <mat-form-field appearance="fill" class="mat-form-field">
       <mat-label>Event Idea Name</mat-label>
       <input matInput formControlName="name" />
     </mat-form-field>
@@ -13,8 +13,10 @@
       <mat-label>Event Idea Image URL</mat-label>
       <input matInput  formControlName="imgUrl"/>
     </mat-form-field>
-    <button mat-flat-button color="primary" type="submit"[disabled]="!eventIdeaForm.valid" class="mat-form-field">Create</button>
+    <button mat-flat-button color="primary" type="submit"[disabled]="!eventIdeaForm.valid" class="mat-form-field">Submit</button>
   </form>
-  <img [src]="imageCreationSrc" alt="image">
+  <div class="event-image-container">
+    <img *ngIf="!eventIdeaConfig" [src]="imageCreationSrc" alt="image">
+    <img *ngIf="eventIdeaConfig" [src]="eventIdeaConfig?.imgUrl" alt="image">
+  </div>
 </div>
-

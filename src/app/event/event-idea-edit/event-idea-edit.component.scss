@@ -1,17 +1,33 @@
 .mat-h1 {
   font-weight: bold;
 }
-.create-event-idea-form-container {
+.event-form-container {
   display: flex;
   gap: 36px;
 
-  .create-event-idea-form {
+  .event-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 25%;
   }
-  img {
+  .event-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      max-height: 75vh;
+      min-width: 0;
+    }
+  }
+  .mat-form-field{
+    .mat-mdc-form-field-textarea-control{
+      min-height: 100px;
+    }
   }
 }

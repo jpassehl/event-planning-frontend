@@ -17,7 +17,6 @@ export class EventListComponent implements OnInit {
   } 
 
   handleDeleteEvent(id: string){
-    console.log(id);
     this.eventIdeaService.deleteEventIdea(id).subscribe({
       next: (v) => console.log(v),
       error: (e) => console.error(e),

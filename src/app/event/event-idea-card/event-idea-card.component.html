@@ -6,7 +6,7 @@
       </mat-card-title>
     </mat-card-header>
     <div class="event-image-container">
-        <img mat-card-image src={{eventIdea.imgUrl}}>
+        <img mat-card-image [src]="eventIdea.imgUrl ? eventIdea.imgUrl : imageCreationSrc">
     </div>
     <mat-card-content>
       {{eventIdea.description}}

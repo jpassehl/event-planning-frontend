@@ -11,6 +11,7 @@ import { EventIdea } from "src/app/models/EventIdea";
 export class EventCardComponent {
     @Input() eventIdea: EventIdea;
     @Output() deleteClicked = new EventEmitter<string>();
+    imageCreationSrc = '../../../assets/images/event-creation.png';
 
     onDeleteClicked(id: string){
         this.deleteClicked.emit(id);

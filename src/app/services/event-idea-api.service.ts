@@ -21,6 +21,9 @@ export class EventIdeaApiService {
     createEventIdea(eventIdea: EventIdea): Observable<EventIdea> {
       return this.http.post<EventIdea>(this.baseApiUrl + '/api/eventidea', eventIdea);
     }
+    updateEventIdea(id: string, eventIdea: EventIdea): Observable<EventIdea> {
+      return this.http.put<EventIdea>(this.baseApiUrl + `/api/eventidea/${id}`, eventIdea);
+    }
      deleteEventIdea(id: string): Observable<EventIdea> {
       return this.http.delete<EventIdea>(this.baseApiUrl + `/api/eventidea/${id}`);
     }
