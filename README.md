@@ -3,7 +3,10 @@
 
 I had an idea to create an app to help the "planner" of the friend group, as that's my role within my community of friends! 😊 I love planning fun events and things to do with my friends, so I'm creating an app to help me to that! The goal is to keep track of "event ideas" (i.e. things we want to do together) , because what happens way too often is that we'll suggest something or we all express interest but it never actually happens! So we need a tool to track it! (think Jira/Trello but for friend hangouts 🤭). This is still very much a WIP, but I'm planning to continue to work on this whenever I have the time!
 
-![image](https://github.com/user-attachments/assets/c7715fe5-c97f-4e17-b6c3-24690e0df7a7)
+![image](https://github.com/user-attachments/assets/ef9080a9-5b9d-4658-81a4-e75d9b8891d1)
+![image](https://github.com/user-attachments/assets/5f78a9d3-4f1e-4fe2-8be7-8f7da872addc)
+
+
 
 ## Development server
 
