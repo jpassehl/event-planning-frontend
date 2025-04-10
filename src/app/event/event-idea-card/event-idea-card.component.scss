@@ -28,11 +28,11 @@
   }
 
   img{
-    flex-grow: 1;
-    flex-basis: 0;
+
     padding: 12px;
-    height: 100%;
-    max-width: 100%;
+    min-height: auto;
+    width: 100%;
+    object-fit: cover;
     color: transparent;
     
   }

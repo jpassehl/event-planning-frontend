@@ -16,7 +16,7 @@
     <button mat-flat-button color="primary" type="submit"[disabled]="!eventIdeaForm.valid" class="mat-form-field">Submit</button>
   </form>
   <div class="event-image-container">
-    <img *ngIf="!eventIdeaConfig" [src]="imageCreationSrc" alt="image">
-    <img *ngIf="eventIdeaConfig" [src]="eventIdeaConfig?.imgUrl" alt="image">
+    <img *ngIf="!eventIdeaConfig?.imgUrl" [src]="imageCreationSrc" alt="image">
+    <img *ngIf="eventIdeaConfig?.imgUrl" [src]="eventIdeaConfig?.imgUrl" alt="image">
   </div>
 </div>
