@@ -22,6 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
 import {ReactiveFormsModule} from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,10 @@ import {ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     StoreModule.forRoot({
 			eventIdeas: eventIdeaReducer,
-    })
+    }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25 // Retains last 25 states
+    }),
   ],
   providers: [
     EventIdeaApiService,

@@ -1,9 +1,9 @@
-import { createSelector } from "@ngrx/store";
-import { AppState } from "../app.state";
+import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { EventIdeaState } from "./event-idea.reducer";
 
-export const selectEventIdeas = (state: AppState) => state.eventIdeas;
-export const selectAllEventIdeas = createSelector (
-  selectEventIdeas,
+export const selectEventIdeasState = createFeatureSelector<EventIdeaState>('eventIdeas')
+
+export const selectEventIdeas = createSelector (
+  selectEventIdeasState,
   (state: EventIdeaState) => state.eventIdeas
 );

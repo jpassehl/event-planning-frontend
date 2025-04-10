@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { EventIdea } from 'src/app/models/EventIdea';
 import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
+import { Store } from '@ngrx/store';
+import { EventIdeaState } from 'src/app/state/event-ideas/event-idea.state';
+import * as EventIdeaAction from 'src/app/state/event-ideas/event-idea.action';
+import {selectEventIdeas} from 'src/app/state/event-ideas/event-idea-selector';
 
 @Component({
   selector: 'event-list',
@@ -10,7 +14,7 @@ import { EventIdeaApiService } from 'src/app/services/event-idea-api.service';
 export class EventListComponent implements OnInit {
   eventList: EventIdea[];
 
-  constructor(private eventIdeaService: EventIdeaApiService){}
+  constructor(private eventIdeaService: EventIdeaApiService, private store: Store<EventIdeaState>){}
 
   ngOnInit(): void {
     this.loadEventIdeas();
@@ -26,7 +30,12 @@ export class EventListComponent implements OnInit {
 
   loadEventIdeas(){
     this.eventIdeaService.getAllEventIdeas().subscribe((data : EventIdea[]) =>{
-      this.eventList = data;
+      this.store.dispatch(EventIdeaAction.loadEventIdeasSuccess({
+        eventIdeas: [...data]
+      }));
+    });
+    this.store.select(selectEventIdeas).subscribe((eventIdeas) => {
+      this.eventList = eventIdeas;
     });
   }
 }
