@@ -1,4 +1,4 @@
-import {EventIdea} from 'src/app/models/EventIdea';
+import { EventIdea } from 'src/app/models/EventIdea';
 
 export interface EventIdeaState {
   eventIdeas: EventIdea[];
